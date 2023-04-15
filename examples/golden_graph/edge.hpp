@@ -1,3 +1,6 @@
+#ifndef EDGE_CLASS
+#define EDGE_CLASS
+
 class Edge {
 public:
     Edge(int id_1, int id_2) : _id_1(id_1), _id_2(id_2) {}
@@ -12,3 +15,5 @@ private:
     int _id_1;
     int _id_2;
 };
+
+#endif //EDGE_CLASS
