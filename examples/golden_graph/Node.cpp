@@ -5,3 +5,9 @@ Node::Node(const int id, const int value)
 	_id = id;
 	_value = value;
 }
+
+void Node::delete_this()
+{
+	_edges.empty();	
+}
+
