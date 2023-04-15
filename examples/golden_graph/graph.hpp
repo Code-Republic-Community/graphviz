@@ -1,5 +1,5 @@
-#ifndef GRAPH_HPP
-#define GRAPH_HPP
+#ifndef EXAMPLES_GOLDEN_GRAPH_GRAPH_HPP
+#define EXAMPLES_GOLDEN_GRAPH_GRAPH_HPP
 
 #include <vector>
 
@@ -13,4 +13,4 @@ public:
     const Node* get_node(int id) const;
 };
 
-#endif //GRAPH_HPP
+#endif //EXAMPLES_GOLDEN_GRAPH_GRAPH_HPP
