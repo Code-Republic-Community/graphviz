@@ -9,6 +9,7 @@ const Node* Graph::get_node(int id)
             return node;
         }
     }
+    return nullptr;
 }
 
 bool Graph::_checkID(int id)
