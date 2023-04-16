@@ -1,7 +1,10 @@
 #include "Node.h"
 
-Node::Node(const int id, const int value)
+Node::Node(int id, int value)
+: _id(id), _value(value)
+{}
+
+void Node::addEdge(Edge* edge)
 {
-	_id = id;
-	_value = value;
+	_edges.push_back(edge);
 }

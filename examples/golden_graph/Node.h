@@ -7,9 +7,10 @@
 class Node
 {
 public:
-	Node(const int, const int);
+	Node(int, int);
 public:
-	void delete_this();	
+	void delete_this();
+	void add_edge(Edge*);	
 private:
 	int _id;
 	int _value;
