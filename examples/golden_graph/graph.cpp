@@ -1,23 +1,21 @@
 #include "graph.hpp"
 
-const Node* Graph::get_node(int id)
-{
-    for (const auto& node: _nodes)
-    {
-        if (node->_id == id)
-        {
+const Node* Graph::get_node(int id) {
+    for (const auto& node: m_nodes) {
+        if (node->_id == id) {
             return node;
         }
     }
     return nullptr;
 }
 
-bool Graph::_checkID(int id)
-{
-    for (const auto& node: _nodes)
-    {
-        if (node->_id == id)
-        {
+const std::vector<Node*>& getAllNodes() {
+    return m_nodes;
+}
+
+bool Graph::_checkID(int id) {
+    for (const auto& node: m_nodes) {
+        if (node->_id == id) {
             return true;
         }
     }
