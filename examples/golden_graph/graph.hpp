@@ -12,7 +12,7 @@ public:
     const Node* getNode(int) const;
     const std::vector<Node*>& getAllNodes() const;
 private:
-    bool _checkID(int id);
+    bool m_checkID(int id);
 private:
     std::vector<Node*> m_nodes;
 };
