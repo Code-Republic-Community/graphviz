@@ -8,6 +8,6 @@ Node::Node(const int id, const int value)
 
 void Node::delete_this()
 {
-	_edges.empty();	
+	m_edges.empty();	
 }
 
