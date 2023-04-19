@@ -8,9 +8,9 @@
 class Node
 {
 public:
-	Node(int, int);
+	Node(int id, int value);
 public:
-	void delete_this();	
+	void deleteThis();	
 private:
 	int m_id;
 	int m_value;
