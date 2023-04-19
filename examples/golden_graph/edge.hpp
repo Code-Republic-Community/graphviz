@@ -3,17 +3,18 @@
 
 class Edge {
 public:
-    Edge(int id_1, int id_2) : _id_1(id_1), _id_2(id_2) {}
+    Edge(int id_1, int id_2);
+    
 public:
-    void set_id_1(int);
-    int get_id_1() const;
+    void setID1(int);
+    int getID1() const;
 
-    void set_id_2(int);
-    int get_id_2() const;
+    void setID2(int);
+    int getID2() const;
 
 private:
-    int _id_1;
-    int _id_2;
+    int m_id_1;
+    int m_id_2;
 };
 
 #endif //EXAMPLE_GOLDEN_GRAPH_EDGE_HPP

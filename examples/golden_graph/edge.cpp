@@ -1,18 +1,19 @@
 #include "edge.hpp"
 
-void Edge::set_id_1(int id_1) {
-    _id_1 = id_1;
+Edge::Edge(int id_1, int id_2) : m_id_1(id_1), m_id_2(id_2) {}
 
+void Edge::setID1(int id_1) {
+    m_id_1 = id_1;
 }
 
-int Edge::get_id_1() const {
-    return _id_1;
+int Edge::getID1() const {
+    return m_id_1;
 }
 
-void Edge::set_id_2(int id_2) {
-    _id_2 = id_2;
+void Edge::setID2(int id_2) {
+    m_id_2 = id_2;
 }
 
-int Edge::get_id_2() const {
-    return _id_2;
+int Edge::getID2() const {
+    return m_id_2;
 }
