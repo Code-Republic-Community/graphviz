@@ -4,12 +4,12 @@
 class Edge {
 public:
     Edge(int id_1, int id_2);
-    
+
 public:
-    void setID1(int);
+    void setID1(int id_1);
     int getID1() const;
 
-    void setID2(int);
+    void setID2(int id_2);
     int getID2() const;
 
 private:
