@@ -22,3 +22,21 @@ bool Graph::m_checkID(int id) {
     return false;
 }
 
+void Graph::addEdge(int id1, int id2)
+{
+	if (m_checkID(id1) && m_checkID(id2))
+	{
+		for (auto& node : m_nodes)
+		{
+			if (node.getID() == id1)
+			{
+				node.addEdge(new Edge(id1, id2));
+			}
+		}
+	}
+	else
+	{
+		std::cout << "Invalid argument: " << std::endl;
+	}
+
+}
