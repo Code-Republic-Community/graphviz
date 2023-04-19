@@ -1,7 +1,7 @@
-#include "Node.h"
+#include "Node.hpp"
 
-Node::Node(const int id, const int value)
+Node::Node(int id, int value)
 {
-	_id = id;
-	_value = value;
+	m_id = id;
+	m_value = value;
 }
