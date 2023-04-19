@@ -1,7 +1,7 @@
 #ifndef EXAMPLES_GOLDEN_GRAPH_NODE_HPP
 #define EXAMPLES_GOLDEN_GRAPH_NODE_HPP
 
-#include "Edge.hpp"
+#include "edge.hpp"
 
 #include <vector>
 
@@ -17,4 +17,5 @@ private:
 	std::vector<Edge*> m_edges;
 };
 
-#endif // NODE_HPP
+#endif // EXAMPLES_GOLDEN_GRAPH_NODE_HPP
+
