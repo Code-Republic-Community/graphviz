@@ -13,7 +13,7 @@ public:
 	void deleteThis();	
 	int getID() const;
 	int getValue() const;
-	const std::vector<Edges*>* getEdges() const;
+	const std::vector<Edges*>& getEdges() const;
 	void print();
 private:
 	int m_id;

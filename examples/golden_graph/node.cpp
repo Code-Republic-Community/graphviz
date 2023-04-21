@@ -12,7 +12,7 @@ int Node::getValue() const
 	return m_value;
 }
 
-std::vector<Edges*>& Node::getEdges() const
+const std::vector<Edges*>& Node::getEdges() const
 {
 	return m_edges;
 }
