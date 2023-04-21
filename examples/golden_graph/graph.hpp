@@ -2,6 +2,7 @@
 #define EXAMPLES_GOLDEN_GRAPH_GRAPH_HPP
 
 #include "node.hpp"
+#include <iostream>
 #include <vector>
 
 class Graph
