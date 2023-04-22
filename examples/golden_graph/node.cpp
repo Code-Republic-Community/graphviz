@@ -12,6 +12,20 @@ int Node::getValue() const
 	return m_value;
 }
 
+void Node::addEdge(int destinationID)
+{
+	for (auto& edge : m_edges)
+	{
+		if (edge.getDestinationID() == destinationID)
+		{
+			std::cout << "Invalid Argument: " << std::endl;
+			return;
+		}
+	}
+	
+	m_edges.push_back(new Edge(destinationID));
+}
+
 const std::vector<Edges*>& Node::getEdges() const
 {
 	return m_edges;

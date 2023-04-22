@@ -15,6 +15,7 @@ public:
     void addEdge(int id1, int id2);
 private:
     bool m_checkID(int id);
+    Node* m_getNode(int id) const;
 private:
     std::vector<Node*> m_nodes;
 };
