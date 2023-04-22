@@ -11,6 +11,10 @@ public:
 	Node(int id, int value);
 public:
 	void deleteThis();	
+	int getID() const;
+	int getValue() const;
+	const std::vector<Edges*>& getEdges() const;
+	void print() const;
 private:
 	int m_id;
 	int m_value;
