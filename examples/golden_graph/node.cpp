@@ -21,5 +21,11 @@ void Node::print()
 {
 	std::cout << "\nID: " << getID()
 		  << "\nValue: " << getValue()
-		  << "\nEdges: " << getEdges().print() << std::endl;
+		  << "\nEdges: ";
+	for (auto& edge : m_edges)
+	{
+		std::cout << "[" << edge.getDestinationID() << "], ";
+	}
+	
+	std::endl;
 }
