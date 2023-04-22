@@ -48,6 +48,5 @@ void addNode(int id, int value)
 		std::cout << "Your have such node: Please change your node id:" << std::endl;
 		return;
 	}
-	Node node(id, value);
-	m_nodes.push_back(node);
+	m_nodes.push_back(new node(id, value));
 }	
