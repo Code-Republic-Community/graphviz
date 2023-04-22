@@ -17,15 +17,15 @@ const std::vector<Edges*>& Node::getEdges() const
 	return m_edges;
 }
 
-void Node::print()
+void Node::print() const
 {
 	std::cout << "\nID: " << getID()
 		  << "\nValue: " << getValue()
-		  << "\nEdges: ";
+		  << "\nEdges: " << "[";
 	for (auto& edge : m_edges)
 	{
-		std::cout << "[" << edge.getDestinationID() << "], ";
+		std::cout << edge.getDestinationID() << ", ";
 	}
 	
-	std::endl;
+	std::cout << "]" << std::endl;
 }
