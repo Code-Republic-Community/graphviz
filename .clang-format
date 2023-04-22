@@ -6,4 +6,4 @@ SpacesBeforeTrailingComments: 2
 IndentCaseLabels: true
 AllowShortCaseLabelsOnASingleLine: false
 ColumnLimit: 100
-InsertNewlineAtEOF: true
+# InsertNewlineAtEOF: true

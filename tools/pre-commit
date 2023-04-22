@@ -13,8 +13,8 @@ fi
 
 # Run clang-format on the staged files.
 for file in $staged_files; do
-  if [[ "${file##*.}" == "h" || "${file##*.}" == "cpp" || "${file##*.}" == "hpp" || "${file##*.}" == "cc" ]]; then
-    clang-format -style=file -i "$file"
+  if [ "${file##*.}" = "h" ] || [ "${file##*.}" = "cpp" ] || [ "${file##*.}" = "hpp" ] || [ "${file##*.}" = "cc" ]; then
+    clang-format -style=file -i "$file" 
     git add "$file"
   fi
 done
