@@ -12,7 +12,7 @@ public:
 public:
 	void deleteThis();	
 private:
-	int m_id;
+	int m_ID;
 	int m_value;
 	std::vector<Edge*> m_edges;
 };
