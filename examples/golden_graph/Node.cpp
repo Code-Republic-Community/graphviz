@@ -1,4 +1,5 @@
 #include "Node.hpp"
+#include <vector>
 
 Node::Node(int id, int value)
 {
@@ -8,6 +9,12 @@ Node::Node(int id, int value)
 
 void Node::delete_this()
 {
-	m_edges.empty();	
+	for (int i = 0; i < m_edges.size(); ++i)
+	{
+		if (m_id != m_edges[i] -> getDestinationID())
+		{
+	
+		}
+	}	
 }
 
