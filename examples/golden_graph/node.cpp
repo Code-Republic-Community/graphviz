@@ -12,18 +12,18 @@ int Node::getValue() const
 	return m_value;
 }
 
-void Node::addEdge(int destinationID)
+void Node::addEdge(Type type, int id)
 {
 	for (auto& edge : m_edges)
 	{
-		if (edge->getDestinationID() == destinationID)
+		if (edge->getID() == id)
 		{
 			std::cout << "Edge already exists: " << std::endl;
 			return;
 		}
 	}
 	
-	m_edges.push_back(new Edge(destinationID));
+	m_edges.push_back(new Edge(type, id));
 }
 
 const std::vector<Edges*>& Node::getEdges() const
