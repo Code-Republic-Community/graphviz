@@ -16,9 +16,9 @@ void Node::addEdge(int destinationID)
 {
 	for (auto& edge : m_edges)
 	{
-		if (edge.getDestinationID() == destinationID)
+		if (edge->getDestinationID() == destinationID)
 		{
-			std::cout << "Invalid Argument: " << std::endl;
+			std::cout << "Edge already exists: " << std::endl;
 			return;
 		}
 	}
@@ -38,7 +38,7 @@ void Node::print() const
 		  << "\nEdges: " << "[";
 	for (auto& edge : m_edges)
 	{
-		std::cout << edge.getDestinationID() << ", ";
+		std::cout << edge->getDestinationID() << ", ";
 	}
 	
 	std::cout << "]" << std::endl;

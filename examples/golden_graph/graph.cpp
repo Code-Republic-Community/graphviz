@@ -26,7 +26,7 @@ Node* Graph::m_getNode(int id) const
 {
 	for (auto& node : m_nodes)
 	{
-		if (node->getID == id)
+		if (node->getID() == id)
 		{
 			return node;
 		}
@@ -37,7 +37,8 @@ void Graph::addEdge(int sourceID, int destinationID)
 {
 	if (m_checkID(sourceID) && m_checkID(destinationID))
 	{
-		m_getNode(sourceID).addEdge(destinationID);
+		m_getNode(sourceID)->addEdge(Type::DESTINATION, destinationID);
+		m_getNode(destinationID)->addEdge(Type::SOURCE, sourceID);
 	}
 	else
 	{
