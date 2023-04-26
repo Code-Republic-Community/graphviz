@@ -4,6 +4,7 @@
 
 Node::Node(int id, int value) : m_id {id}, m_value {value} {}
 
+<<<<<<< HEAD
 void Node::deleteThis()
 {
 	for (int i = 0; i < m_edges.size(); ++i)
@@ -21,4 +22,32 @@ void Node::deleteThis()
 		}
 	}
 	m_edges.clear();
+=======
+int Node::getID() const
+{
+	return m_id;
+}
+
+int Node::getValue() const
+{
+	return m_value;
+}
+
+const std::vector<Edges*>& Node::getEdges() const
+{
+	return m_edges;
+}
+
+void Node::print() const
+{
+	std::cout << "\nID: " << getID()
+		  << "\nValue: " << getValue()
+		  << "\nEdges: " << "[";
+	for (auto& edge : m_edges)
+	{
+		std::cout << edge.getDestinationID() << ", ";
+	}
+	
+	std::cout << "]" << std::endl;
+>>>>>>> main
 }
