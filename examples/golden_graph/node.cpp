@@ -29,3 +29,13 @@ void Node::print() const
 	
 	std::cout << "]" << std::endl;
 }
+
+void Node::deleteEdge(int edgeID) {
+	for(auto it = m_edges.begin(); it != m_edges.end(); ++it) {
+		if((*it)->getID() == edgeID) {
+			delete *it;
+			m_edges.erase(it);
+			break;
+		}
+	}
+}

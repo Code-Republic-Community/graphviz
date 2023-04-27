@@ -15,6 +15,7 @@ public:
 	int getValue() const;
 	const std::vector<Edges*>& getEdges() const;
 	void print() const;
+	void deleteEdge(int edgeID);
 private:
 	int m_ID;
 	int m_value;
