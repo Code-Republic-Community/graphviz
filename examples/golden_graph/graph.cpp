@@ -31,14 +31,16 @@ Node* Graph::m_getNode(int id) const
 			return node;
 		}
 	}
+
+	return nullptr;
 }
 
 void Graph::addEdge(int sourceID, int destinationID)
 {
 	if (m_checkID(sourceID) && m_checkID(destinationID))
 	{
-		m_getNode(sourceID)->addEdge(Type::DESTINATION, destinationID);
-		m_getNode(destinationID)->addEdge(Type::SOURCE, sourceID);
+		m_getNode(sourceID)->addEdge(destinationID, Direction::DESTINATION);
+		m_getNode(destinationID)->addEdge(sourceID, Direction::SOURCE);
 	}
 	else
 	{

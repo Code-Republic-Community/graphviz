@@ -1,6 +1,7 @@
 #include "node.hpp"
+#include <iostream>
 
-Node::Node(int id, int value) : m_id {id}, m_value {value} {}
+Node::Node(int id, int value) : m_id (id), m_value (value) {}
 
 int Node::getID() const
 {
@@ -12,7 +13,7 @@ int Node::getValue() const
 	return m_value;
 }
 
-void Node::addEdge(Type type, int id)
+void Node::addEdge(int id, Direction direction)
 {
 	for (auto& edge : m_edges)
 	{
@@ -23,10 +24,10 @@ void Node::addEdge(Type type, int id)
 		}
 	}
 	
-	m_edges.push_back(new Edge(type, id));
+	m_edges.push_back(new Edge(id, direction));
 }
 
-const std::vector<Edges*>& Node::getEdges() const
+const std::vector<Edge*>& Node::getEdges() const
 {
 	return m_edges;
 }
@@ -38,7 +39,7 @@ void Node::print() const
 		  << "\nEdges: " << "[";
 	for (auto& edge : m_edges)
 	{
-		std::cout << edge->getDestinationID() << ", ";
+		std::cout << edge->getID() << ", ";
 	}
 	
 	std::cout << "]" << std::endl;

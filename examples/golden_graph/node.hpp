@@ -13,8 +13,8 @@ public:
 	void deleteThis();	
 	int getID() const;
 	int getValue() const;
-	void addEdge(Type type, int id);
-	const std::vector<Edges*>& getEdges() const;
+	void addEdge(int id, Direction direction);
+	const std::vector<Edge*>& getEdges() const;
 	void print() const;
 private:
 	int m_id;
