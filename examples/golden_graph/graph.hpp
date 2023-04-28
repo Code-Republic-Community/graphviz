@@ -12,11 +12,7 @@ public:
 public:
     const Node* getNode(int id) const;
     const std::vector<Node*>& getAllNodes() const;
-<<<<<<< HEAD
     void addEdge(int sourceID, int destinationID);
-=======
-    void addEdge(int id1, int id2);
->>>>>>> main
     void addNode(int id, int value);
 private:
     bool m_checkID(int id);
