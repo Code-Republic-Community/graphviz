@@ -48,3 +48,13 @@ void Graph::addEdge(int sourceID, int destinationID)
 	}
 
 }
+
+void addNode(int id, int value)
+{
+	if (m_checkID(id))
+	{
+		std::cout << "Your have such node: Please change your node id:" << std::endl;
+		return;
+	}
+	m_nodes.push_back(new Node(id, value));
+}	
