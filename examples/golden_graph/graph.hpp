@@ -13,6 +13,7 @@ public:
     const Node* getNode(int id) const;
     const std::vector<Node*>& getAllNodes() const;
     void addEdge(int id1, int id2);
+    void addNode(int id, int value);
 private:
     bool m_checkID(int id);
 private:
