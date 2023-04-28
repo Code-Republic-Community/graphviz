@@ -3,6 +3,10 @@
 
 Node::Node(int id, int value) : m_id (id), m_value (value) {}
 
+void Node::setValue(int value){
+	m_value = value;
+}
+
 int Node::getID() const
 {
 	return m_id;
