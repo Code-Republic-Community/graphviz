@@ -16,10 +16,12 @@ public:
 public:
     const Node* getNode(int id) const;
     const std::vector<Node*>& getAllNodes() const;
-    void addEdge(int id1, int id2);
     static void Graph::graphExport(const Graph* graph);
+    void addEdge(int sourceID, int destinationID);
+    void addNode(int id, int value);
 private:
     bool m_checkID(int id);
+    Node* m_getNode(int id) const;
 private:
     std::vector<Node*> m_nodes;
 };

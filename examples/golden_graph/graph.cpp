@@ -22,17 +22,25 @@ bool Graph::m_checkID(int id) {
     return false;
 }
 
-void Graph::addEdge(int id1, int id2)
+Node* Graph::m_getNode(int id) const
 {
-	if (m_checkID(id1) && m_checkID(id2))
+	for (auto& node : m_nodes)
 	{
-		for (auto& node : m_nodes)
+		if (node->getID() == id)
 		{
-			if (node.getID() == id1)
-			{
-				node.addEdge(new Edge(id1, id2));
-			}
+			return node;
 		}
+	}
+
+	return nullptr;
+}
+
+void Graph::addEdge(int sourceID, int destinationID)
+{
+	if (m_checkID(sourceID) && m_checkID(destinationID))
+	{
+		m_getNode(sourceID)->addEdge(destinationID, Direction::DESTINATION);
+		m_getNode(destinationID)->addEdge(sourceID, Direction::SOURCE);
 	}
 	else
 	{
@@ -77,3 +85,13 @@ static void Graph::graphExport(const Graph* graph) {
     file << jsonGraph.dump(4); // pretty print with 4 spaces
     file.close();
 }
+
+void addNode(int id, int value)
+{
+	if (m_checkID(id))
+	{
+		std::cout << "Your have such node: Please change your node id:" << std::endl;
+		return;
+	}
+	m_nodes.push_back(new Node(id, value));
+}	
