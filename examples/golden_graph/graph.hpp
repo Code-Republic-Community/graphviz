@@ -14,8 +14,9 @@ public:
     const std::vector<Node*>& getAllNodes() const;
     void addEdge(int sourceID, int destinationID);
     void addNode(int id, int value);
+    bool checkID(int id) const;
+    void deleteNode(int id);
 private:
-    bool m_checkID(int id);
     Node* m_getNode(int id) const;
 private:
     std::vector<Node*> m_nodes;

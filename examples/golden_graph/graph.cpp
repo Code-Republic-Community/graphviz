@@ -13,7 +13,7 @@ const std::vector<Node*>& Graph::getAllNodes() const {
     return m_nodes;
 }
 
-bool Graph::m_checkID(int id) {
+bool Graph::checkID(int id) const {
     for (const auto& node: m_nodes) {
         if (node->getID() == id) {
             return true;
@@ -57,4 +57,18 @@ void addNode(int id, int value)
 		return;
 	}
 	m_nodes.push_back(new Node(id, value));
+}	
+
+void deleteNode(int id)
+{
+	if (!checkID(id))
+	{
+		std::cout << "wrong id";
+		return ;
+	}
+	Node* node = get_node(id);
+	for (int i = 0; i < node -> m_edges.size(); ++i)
+	{
+		node -> m_edges[i] -> deleteEdge(m_edges[i].get_ID());
+	}
 }	
