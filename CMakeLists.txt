@@ -22,6 +22,5 @@ target_include_directories(my_project_executable PRIVATE
     include
 )
 
-
 add_subdirectory(libs)
 add_subdirectory(tests)
