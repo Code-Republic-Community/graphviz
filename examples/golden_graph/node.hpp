@@ -2,7 +2,7 @@
 #define EXAMPLES_GOLDEN_GRAPH_NODE_HPP
 
 #include "edge.hpp"
-#include <iostream>
+
 #include <vector>
 
 class Node
@@ -10,7 +10,6 @@ class Node
 public:
 	Node(int id, int value);
 public:
-	void deleteThis();	
 	void setValue(int value);
 	int getID() const;
 	int getValue() const;
