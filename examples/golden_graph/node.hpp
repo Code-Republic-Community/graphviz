@@ -14,6 +14,7 @@ public:
 	void setValue(int value);
 	int getID() const;
 	int getValue() const;
+	void addEdge(int id, Direction direction);
 	const std::vector<Edge*>& getEdges() const;
 	void print() const;
 	void deleteEdge(int edgeID);
