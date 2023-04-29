@@ -48,6 +48,11 @@ void Graph::addEdge(int sourceID, int destinationID)
 
 }
 
+void Graph::printNodeProperties(int id) const
+{
+	m_getNode(id).print();
+}
+
 void Graph::deleteEdge(int id1, int id2) {
 	Node* node1 = const_cast<Node*>(getNode(id1));
     Node* node2 = const_cast<Node*>(getNode(id2));

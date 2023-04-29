@@ -21,6 +21,7 @@ public:
     static void Graph::graphExport(const Graph* graph);
     void addEdge(int sourceID, int destinationID);
     void addNode(int id, int value);
+    void printNodeProperties(int id) const;
 private:
     bool m_checkID(int id);
     Node* m_getNode(int id) const;
