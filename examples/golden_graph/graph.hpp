@@ -2,8 +2,12 @@
 #define EXAMPLES_GOLDEN_GRAPH_GRAPH_HPP
 
 #include "node.hpp"
+#include "edge.hpp"
+#include "../../libs/json/include/nlohmann/json.hpp"  // This relative path will be modified
 #include <iostream>
 #include <vector>
+
+using json = nlohmann::json;
 
 class Graph
 {
@@ -12,6 +16,7 @@ public:
 public:
     const Node* getNode(int id) const;
     const std::vector<Node*>& getAllNodes() const;
+    static void Graph::graphExport(const Graph* graph);
     void addEdge(int sourceID, int destinationID);
     void addNode(int id, int value);
 private:

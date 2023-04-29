@@ -49,6 +49,43 @@ void Graph::addEdge(int sourceID, int destinationID)
 
 }
 
+static void Graph::graphExport(const Graph* graph) {
+	// create integer to hold index of graph
+	static int indexOfGraph = 1;
+	
+	// create the jsonGraph object
+	json jsonGraph;
+	jsonGraph["node"] = json::array();
+	const auto nodes = graph->getAllNodes();
+	for (const auto& node : nodes) {
+		jsonGraph["node"].push_back(node->getID());
+	}
+
+	// create jsonNode objects for the first graph
+	for (const auto& node : nodes) {
+		json jsonNode;
+		jsonNode["value"] = node->getValue();
+		jsonNode["neighbors"] = json::array();
+
+		// add each neighbor to the jsonNode object
+		const auto edges = node->getEdges();
+		for (const auto& edge : edges) {
+			jsonNode["neighbors"].push_back(edge->getDestinationID());
+		}
+		// add the jsonNode object to the graph object
+		jsonGraph[node->getID()] = jsonNode;
+	}
+
+	// Add name of graph. Example graph_1, graph_2, ...
+	jsonGraph["name"] = "graph_" + std::to_string(indexOfGraph);
+	++indexOfGraph;
+
+    // write the JSON object to a file
+    std::ofstream file("export.json", std::ios::app);
+    file << jsonGraph.dump(4); // pretty print with 4 spaces
+    file.close();
+}
+
 void addNode(int id, int value)
 {
 	if (m_checkID(id))
