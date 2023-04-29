@@ -31,7 +31,6 @@ Node* Graph::m_getNode(int id) const
 			return node;
 		}
 	}
-
 	return nullptr;
 }
 
@@ -49,6 +48,33 @@ void Graph::addEdge(int sourceID, int destinationID)
 
 }
 
+void Graph::deleteEdge(int id1, int id2) {
+	Node* node1 = const_cast<Node*>(getNode(id1));
+    Node* node2 = const_cast<Node*>(getNode(id2));
+    
+    if (!node1 || !node2) {
+        std::cout << "Error: invalid node ID's" << std::endl;
+        return;
+    }
+    
+    for (auto it = node1->getEdges().begin(); it != node1->getEdges().end(); ++it) {
+        Edge* edge = *it;
+        if (edge->getDestinationID() == node2->getID()) {
+            node1->getEdges().erase(it);
+            delete edge;
+            break;
+        }
+    }
+    
+    for (auto it = node2->getEdges().begin(); it != node2->getEdges().end(); ++it) {
+        Edge* edge = *it;
+        if (edge->getDestinationID() == node1->getID()) {
+            node2->getEdges().erase(it);
+            delete edge;
+            break;
+        }
+    }
+}
 static void Graph::graphExport(const Graph* graph) {
 	// create integer to hold index of graph
 	static int indexOfGraph = 1;
