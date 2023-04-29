@@ -50,3 +50,17 @@ void addNode(int id, int value)
 	}
 	m_nodes.push_back(new Node(id, value));
 }	
+
+void deleteNode(int id)
+{
+	int index = checkID(id);
+	if (index == -1)
+	{
+		std::cout << "wrong id";
+		return;
+	}
+	for (int i = 0; i < m_nodes[index] -> m_edges.size(); ++i)
+	{
+		m_nodes[index] -> m_edges[i] -> deleteEdge();
+	}
+}
