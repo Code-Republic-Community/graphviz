@@ -7,3 +7,7 @@ add_test(NAME base_template COMMAND base_template)
 add_executable(edge_class_test edgetest.cpp ../examples/golden_graph/edge.cpp)
 target_link_libraries(edge_class_test gtest_main)
 add_test(NAME edge_class_test COMMAND edge_class_test)
+
+add_executable(graphTest graphTest.cpp ../examples/golden_graph/graph.cpp ../examples/golden_graph/node.cpp ../examples/golden_graph/edge.cpp)
+target_link_libraries(graphTest gtest_main)
+add_test(NAME graphTest COMMAND graphTest)

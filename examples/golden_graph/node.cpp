@@ -51,8 +51,9 @@ void Node::print() const
 
 void Node::deleteEdge(int edgeID) {
 	for(auto it = m_edges.begin(); it != m_edges.end(); ++it) {
-		if((*it)->getID() == edgeID) {
-			delete *it;
+		Edge* edge = *it;
+		if(edge->getID() == edgeID) {
+			delete edge;
 			m_edges.erase(it);
 			break;
 		}
