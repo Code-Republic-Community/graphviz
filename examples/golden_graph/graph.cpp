@@ -41,6 +41,12 @@ void Graph::addEdge(int id1, int id2)
 
 }
 
+void Graph::printNodeProperties(int id) const
+{
+
+	m_getNode(id).print();
+}
+
 void addNode(int id, int value)
 {
 	if (m_checkID(id))

@@ -14,6 +14,7 @@ public:
     const std::vector<Node*>& getAllNodes() const;
     void addEdge(int id1, int id2);
     void addNode(int id, int value);
+    void printNodeProperties(int id) const;
 private:
     bool m_checkID(int id);
 private:
