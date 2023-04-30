@@ -134,7 +134,7 @@ void deleteNode(int id)
 		std::cout << "wrong id";
 		return ;
 	}
-	Node* node = get_node(id);
+	Node* node = m_get_node(id);
 	for (int i = 0; i < node -> m_edges.size(); ++i)
 	{
 		node -> m_edges[i] -> deleteEdge(m_edges[i].get_ID());
