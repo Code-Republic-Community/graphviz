@@ -36,6 +36,11 @@ const std::vector<Edge*>& Node::getEdges() const
 	return m_edges;
 }
 
+// std::vector<Edge*> Node::m_getEdges() const 
+// {
+// 	return m_edges;
+// }
+
 void Node::print() const
 {
 	std::cout << "\nID: " << getID()

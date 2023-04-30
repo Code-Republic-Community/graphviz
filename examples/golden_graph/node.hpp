@@ -9,6 +9,7 @@ class Node
 {
 public:
 	Node(int id, int value);
+
 public:
 	void deleteThis();	
 	void setValue(int value);
@@ -18,6 +19,10 @@ public:
 	const std::vector<Edge*>& getEdges() const;
 	void print() const;
 	void deleteEdge(int edgeID);
+
+private:
+	// std::vector<Edge*> m_getEdges() const;
+	
 private:
 	int m_ID;
 	int m_value;

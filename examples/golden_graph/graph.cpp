@@ -135,8 +135,8 @@ void deleteNode(int id)
 		return ;
 	}
 	Node* node = get_node(id);
-	for (int i = 0; i < node -> m_edges.size(); ++i)
+	for (int i = 0; i < node->m_edges.size(); ++i)
 	{
-		node -> m_edges[i] -> deleteEdge(m_edges[i].get_ID());
+		node->m_edges[i]->deleteEdge(m_edges[i].get_ID());
 	}
 }	
