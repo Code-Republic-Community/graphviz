@@ -21,9 +21,6 @@ public:
 	void deleteEdge(int edgeID);
 
 private:
-	// std::vector<Edge*> m_getEdges() const;
-	
-private:
 	int m_ID;
 	int m_value;
 	std::vector<Edge*> m_edges;
