@@ -139,4 +139,5 @@ void deleteNode(int id)
 	{
 		node -> m_edges[i] -> deleteEdge(m_edges[i].get_ID());
 	}
+	delete node;
 }	
