@@ -125,6 +125,7 @@ void Graph::addNode(int id, int value)
 	m_nodes.push_back(new Node(id, value));
 }
 
+
 // void Graph::deleteNode(int id)
 // {
 // 	if (!checkID(id))
