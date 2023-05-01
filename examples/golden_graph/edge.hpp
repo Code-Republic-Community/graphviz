@@ -1,16 +1,20 @@
 #ifndef EXAMPLE_GOLDEN_GRAPH_EDGE_HPP
-#define EXAMOLE_GOLDEN_GRAPH_EDGE_HPP
+#define EXAMPLE_GOLDEN_GRAPH_EDGE_HPP
+#include <stdint.h>
+
+enum class Direction : int16_t { DESTINATION, SOURCE };
 
 class Edge {
-public:
-    Edge(int destinationID);
+   public:
+    Edge(int id, Direction direction);
 
-public:
-    void setDestinationID(int destinationID);
-    int getDestinationID() const;
+   public:
+    Direction getDirection() const;
+    int getID() const;
 
-private:
-    int m_destinationID;
+   private:
+    Direction m_direction;
+    int m_ID;
 };
 
-#endif //EXAMPLE_GOLDEN_GRAPH_EDGE_HPP
+#endif  // EXAMPLE_GOLDEN_GRAPH_EDGE_HPP

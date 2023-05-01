@@ -1,11 +1,7 @@
 #include "edge.hpp"
 
-Edge::Edge(int destinationID) : m_destinationID(destinationID) {}
+Edge::Edge(int id, Direction direction) : m_ID(id), m_direction(direction) {}
 
-void Edge::setDestinationID(int destinationID) {
-    m_destinationID = destinationID;
-}
+Direction Edge::getDirection() const { return m_direction; }
 
-int Edge::getDestinationID() const {
-    return m_destinationID;
-}
+int Edge::getID() const { return m_ID; }
