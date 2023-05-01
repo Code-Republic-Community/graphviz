@@ -7,6 +7,7 @@
 #include "../../libs/json/include/nlohmann/json.hpp"  // This relative path will be modified
 #include <iostream>
 #include <vector>
+#include <fstream>
 
 using json = nlohmann::json;
 
@@ -18,7 +19,7 @@ public:
     const Node* getNode(int id) const;
     const std::vector<Node*>& getAllNodes() const;
     void deleteEdge(int id1, int id2);
-    static void Graph::graphExport(const Graph* graph);
+    static void graphExport(const Graph* graph);
     void addEdge(int sourceID, int destinationID);
     void addNode(int id, int value);
     bool checkID(int id) const;
